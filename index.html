@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>YGGDRASIL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="vignette"></div>
+
+  <main id="ui">
+    <!-- TITLE -->
+    <section class="screen title" data-screen="title">
+      <h1>YGGDRASIL</h1>
+      <p class="subtitle">A Fantasy World</p>
+      <nav class="menu">
+        <button data-action="newGame">New Game</button>
+        <button data-action="settings">Settings</button>
+        <button data-action="exit">Exit</button>
+      </nav>
+      <p class="version" id="version"></p>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="screen panel-screen" data-screen="settings">
+      <div class="panel">
+        <h2>Settings</h2>
+        <label class="row">
+          <span>Master volume</span>
+          <input type="range" id="set-volume" min="0" max="1" step="0.05">
+        </label>
+        <label class="row">
+          <span>Shadows</span>
+          <input type="checkbox" id="set-shadows">
+        </label>
+        <button class="back" data-action="back">Back</button>
+      </div>
+    </section>
+
+    <!-- PLACEHOLDER (replaced in Milestone 2) -->
+    <section class="screen panel-screen" data-screen="character">
+      <div class="panel">
+        <h2>Character Creation</h2>
+        <p class="note">Coming in Milestone 2.</p>
+        <button class="back" data-action="back">Back</button>
+      </div>
+    </section>
+
+    <!-- EXIT -->
+    <section class="screen panel-screen" data-screen="exit">
+      <div class="panel">
+        <h2>Farewell, adventurer.</h2>
+        <p class="note">You can close this tab now.</p>
+        <button class="back" data-action="back">Return</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
